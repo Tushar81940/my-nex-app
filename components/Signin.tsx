@@ -20,7 +20,7 @@ const Signin: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Add login logic here
-    console.log('Sign In Data:', formData);
+    console.log('Sign Inn Data:', formData);
   };
 
   return (
@@ -67,7 +67,7 @@ const Signin: React.FC = () => {
         </form>
 
         <p className="text-sm text-center text-gray-600 mt-4">
-          Don't have an account? <a href="/signup" className="text-blue-600 hover:underline">Sign Up</a>
+          Don't have an account ? <a href="/signup" className="text-blue-600 hover:underline">Sign Up</a>
         </p>
       </div>
     </div>
