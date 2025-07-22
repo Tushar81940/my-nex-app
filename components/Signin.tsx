@@ -20,7 +20,7 @@ const Signin: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Add login logic here
-    console.log('Sign Inn Data:', formData);
+    console.log('Sign In Data:', formData);
   };
 
   return (
