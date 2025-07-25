@@ -14,21 +14,36 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <nav className="w-full flex items-center justify-between px-6 py-4 bg-white border-b mb-6">
-          <div className="font-bold text-lg">Medium Website</div>
-          <ul className="flex gap-6">
+        <nav className="w-full flex items-center justify-between px-6 py-4 bg-white border-b mb-6" aria-label="Main navigation">
+          <div className="font-bold text-lg" aria-label="Website logo">Medium Website</div>
+          <ul className="flex gap-6" role="list">
             <li>
-              <a href="/" className="hover:underline">Home</a>
+              <a href="/" className="hover:underline" aria-label="Home page">Home</a>
             </li>
             <li>
-              <a href="/auth/signin" className="hover:underline">Sign In</a>
+              <a href="/auth/signin" className="hover:underline" aria-label="Sign in">Sign In</a>
             </li>
             <li>
-              <a href="/auth/signup" className="hover:underline">Sign Up</a>
+              <a href="/auth/signup" className="hover:underline" aria-label="Sign up">Sign Up</a>
             </li>
           </ul>
+          <button
+            id="dark-mode-toggle"
+            aria-label="Toggle dark mode"
+            className="ml-4 px-3 py-1 rounded border bg-gray-100 hover:bg-gray-200 text-sm"
+            onClick={() => {
+              if (typeof document !== 'undefined') {
+                document.body.classList.toggle('dark');
+              }
+            }}
+          >
+            🌙
+          </button>
         </nav>
-        {children}
+        <main role="main">{children}</main>
+        <footer className="w-full px-6 py-4 bg-gray-100 border-t mt-12 text-center text-sm text-gray-600" aria-label="Footer">
+          <span>&copy; {new Date().getFullYear()} Medium Website. All rights reserved.</span>
+        </footer>
       </body>
     </html>
   );
