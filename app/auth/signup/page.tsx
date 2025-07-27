@@ -21,7 +21,7 @@ const Signup = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">Create an Account</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center">Create a new Account</h2>
         <input
           type="text"
           name="name"

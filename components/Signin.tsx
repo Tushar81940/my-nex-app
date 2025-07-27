@@ -57,7 +57,7 @@ const Signin: React.FC = () => {
           </div>
 
           <button onClick = {function(){
-            console.log('Sign In button clicked');
+            console.log('Sign In button got clicked');
           }}
             type="submit"
             className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition duration-200"
@@ -67,7 +67,7 @@ const Signin: React.FC = () => {
         </form>
 
         <p className="text-sm text-center text-gray-600 mt-4">
-          Don't have an account ? <a href="/signup" className="text-blue-600 hover:underline">Sign Up</a>
+          Don't have an account ?  <a href="/signup" className="text-blue-600 hover:underline">Sign Up</a>
         </p>
       </div>
     </div>
